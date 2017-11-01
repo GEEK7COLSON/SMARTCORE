@@ -1,0 +1,25 @@
+--cpu Cortex-M3
+"smartcore\startup_stm32f103xe.o"
+"smartcore\main.o"
+"smartcore\stm32f1xx_it.o"
+"smartcore\stm32f1xx_hal_msp.o"
+"smartcore\light_control.o"
+"smartcore\system_stm32f1xx.o"
+"smartcore\stm32f1xx_hal_rcc_ex.o"
+"smartcore\stm32f1xx_hal_gpio.o"
+"smartcore\stm32f1xx_hal_cortex.o"
+"smartcore\stm32f1xx_hal_uart.o"
+"smartcore\stm32f1xx_hal_gpio_ex.o"
+"smartcore\stm32f1xx_hal_dma.o"
+"smartcore\stm32f1xx_hal_tim.o"
+"smartcore\stm32f1xx_hal_tim_ex.o"
+"smartcore\stm32f1xx_hal_rcc.o"
+"smartcore\stm32f1xx_hal.o"
+"smartcore\stm32f1xx_hal_flash.o"
+"smartcore\stm32f1xx_hal_flash_ex.o"
+"smartcore\stm32f1xx_hal_pwr.o"
+--library_type=microlib --strict --scatter "SMARTCORE\SMARTCORE.sct"
+
+--diag_suppress=L6329 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "SMARTCORE.map" -o SMARTCORE\SMARTCORE.axf
